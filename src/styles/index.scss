@@ -1,0 +1,75 @@
+/* Bootstrap settings */
+
+$dark: #222831;
+$muted: #b1b7c9;
+$primary: #a393eb;
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+.small {
+  font-size: 0.88em;
+}
+.font-weight-100 {
+  font-weight: 100;
+}
+.font-weight-200 {
+  font-weight: 200;
+}
+.font-weight-300 {
+  font-weight: 300;
+}
+.font-weight-400 {
+  font-weight: 400;
+}
+.font-weight-500 {
+  font-weight: 500;
+}
+.font-weight-600 {
+  font-weight: 600;
+}
+.font-weight-700 {
+  font-weight: 700;
+}
+.font-weight-800 {
+  font-weight: 800;
+}
+.text-muted {
+  color: $muted !important;
+}
+.text-gradient-0 {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(253,193,104,1) 0%, rgba(251,128,128,1) 90% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rounded-max {
+  border-radius: 200px;
+}
+
+/* General styles */
+
+@import "../assets/fonts/silka-roman/stylesheet.css";
+@import "./hamburgers.css";
+
+body {
+  margin: 0;
+  font-family: "silka", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $dark;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
+
+h1 {
+  b {
+    @extend .text-gradient-0;
+  }
+}
+
+.hamburger {
+  transform: scale(0.6);
+  display: inline-block;
+}
