@@ -2,9 +2,9 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import {Parallax} from "react-scroll-parallax";
-import Terminal from "../atoms/Terminal";
+import Terminal from "../molecules/Terminal";
 
-const AboutMeSection = props => {
+const MyInformations = props => {
   return (
     <div>
       <h2 className="mb-4">About me</h2>
@@ -28,4 +28,4 @@ const AboutMeSection = props => {
   )
 };
 
-export default AboutMeSection
+export default MyInformations
