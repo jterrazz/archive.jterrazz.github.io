@@ -8,7 +8,7 @@ import ShapesParallaxBackground from "../molecules/ShapesParallaxBackground";
 import WelcomeMessage from "../organisms/WelcomeMessage";
 import MyArticles from "../organisms/MyArticles";
 
-const Home = props => {
+const HomePage = props => {
 
   return (
     <div>
@@ -18,7 +18,9 @@ const Home = props => {
               <WelcomeMessage/>
             </Container>
           </div>
-
+          <div className="position-absolute w-100 d-flex justify-content-center" style={{bottom: 0, marginBottom: -20}}>
+            <img src="/images/waving-hand.svg" width={42}/>
+          </div>
           {/*<ShapesParallaxBackground/>*/}
         </div>
 
@@ -32,7 +34,7 @@ const Home = props => {
         <MyInformations/>
       </Container>
 
-      <div className="bg-clear">
+      <div>
         <Container className="py-5">
           <MyProjects/>
         </Container>
@@ -44,14 +46,19 @@ const Home = props => {
         </Container>
       </div>
 
-      <div>
-        Want to contact me ????
-        Mail
-        Send message from this site
+      <div className="bg-dark text-white">
+        <Container>
+          <div className="bg-primary p-5">
+            Whant to contact me?
+            <span className="text-dark">Let's get started!</span>
+            <Button>Email me</Button>
+            <Button>Access form</Button>
+          </div>
+        </Container>
       </div>
 
     </div>
   )
 }
 
-export default Home
+export default HomePage

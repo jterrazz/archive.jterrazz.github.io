@@ -6,7 +6,6 @@ const MyIntroduction = props => {
   return (
     <div>
       <p className="mb-4">
-        <img src="/images/waving-hand.svg" width={42} className="mb-2"/>
         <h2 className="mb-5 font-weight-700">
           Hey there *waves*, my <br/> name is Jean-Baptiste, developer, <br/>XXX and XXX.
         </h2>

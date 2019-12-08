@@ -34,6 +34,10 @@ const MyProjects = props => {
         {filteredProjects.map(project => <ProjectCell project={project}/>)}
       </Row>
 
+      + 36 projects on github
+
+      Find all my projects on github and devpost
+
     </div>
   )
 };

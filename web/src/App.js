@@ -7,9 +7,10 @@ import {
 } from "react-router-dom";
 
 import TheNavBar from "./components/organisms/TheNavBar";
-import Home from "./components/pages/Home";
+import HomePage from "./components/pages/Home";
 import TheFooter from "./components/organisms/TheFooter";
 import WelcomeModal from "./components/organisms/WelcomeModal";
+import ContactPage from "./components/pages/Contact";
 
 export default function App() {
   return (
@@ -18,7 +19,10 @@ export default function App() {
         <ParallaxProvider>
           <Switch>
             <Route path="/">
-              <Home/>
+              <HomePage/>
+            </Route>
+            <Route path="/contact">
+              <ContactPage/>
             </Route>
           </Switch>
         </ParallaxProvider>
