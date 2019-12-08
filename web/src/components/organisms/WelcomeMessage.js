@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 const WelcomeMessage = props => {
   return (
@@ -11,7 +12,9 @@ const WelcomeMessage = props => {
         I create <b>clean, robust, scalable and powerful</b> applications for the new world, same quality from backend to frontend.
       </h1>
       <Button variant="dark" className="rounded-pill font-weight-500 px-3">My work</Button>
-      <Button className="rounded-pill font-weight-500 px-3 text-gradient-0">Contact me</Button>
+      <Link to="/contact">
+        <Button variant="transparent" className="font-weight-500 px-3 text-gradient-0">Contact me</Button>
+      </Link>
     </div>
   )
 }

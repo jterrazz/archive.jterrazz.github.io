@@ -18,11 +18,11 @@ export default function App() {
       <TheNavBar/>
         <ParallaxProvider>
           <Switch>
-            <Route path="/">
-              <HomePage/>
-            </Route>
             <Route path="/contact">
               <ContactPage/>
+            </Route>
+            <Route path="/">
+              <HomePage/>
             </Route>
           </Switch>
         </ParallaxProvider>
