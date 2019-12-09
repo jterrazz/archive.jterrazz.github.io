@@ -1,17 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import Container from "react-bootstrap/Container";
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {
+  faGithub,
+  faLinkedin,
+  faSkype,
+  faTelegram,
+  faTwitter,
+  faWhatsapp
+} from '@fortawesome/free-brands-svg-icons'
 
 const TheFooter = props => {
   const socialLinks = [
-    { imgSrc: "email.svg", alt: "skype account",  link: "https://email.com" },
-    { imgSrc: "012-github.svg", alt: "github account",  link: "https://github.com/jterrazz" },
-    { imgSrc: "015-linkedin.svg", alt: "linkedin account",  link: "https://linkedin.com/in/jterrazz" },
-    { imgSrc: "007-twitter.svg", alt: "twitter account",  link: "https://twitter.com/42jterrazz" },
-    { imgSrc: "009-telegram.svg", alt: "telegram account",  link: "https://telegram.com" },
-    { imgSrc: "018-whatsapp.svg", alt: "whatsapp account",  link: "https://whatsapp.com" },
-    { imgSrc: "021-skype.svg", alt: "skype account",  link: "https://skype.com" },
+    {component: faEnvelope, link: "https://email.com"},
+    {component: faGithub, link: "https://email.com"},
+    {component: faLinkedin, link: "https://email.com"},
+    {component: faTwitter, link: "https://email.com"},
+    {component: faTelegram, link: "https://email.com"},
+    {component: faWhatsapp, link: "https://email.com"},
+    {component: faSkype, link: "https://email.com"},
   ]
+
   return (
     <footer className="bg-dark text-white py-5">
       <Container className="d-flex align-items-center justify-content-between">
@@ -23,11 +35,19 @@ const TheFooter = props => {
         </div>
 
         <ul className="d-flex m-0">
-          {socialLinks.map(social => <li><img src={"/images/social/" + social.imgSrc} alt={social.alt} height={24} width={24} className="mr-2"/></li>)}
+          {socialLinks.map(social => (
+            <li>
+              <div className="social-outer mr-3">
+                <FontAwesomeIcon size="lg" icon={social.component}/>
+              </div>
+            </li>
+          ))}
         </ul>
 
         <div className="text-muted text-right small">
-          <div>Made with <span role="img" aria-label="love">❤️</span> (and ReactJS)</div>
+          <div>Made with <span role="img" aria-label="love">❤️</span> (and
+            ReactJS)
+          </div>
           <div>Hosted on GitHub Pages</div>
         </div>
 

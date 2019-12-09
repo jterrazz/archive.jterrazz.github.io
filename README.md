@@ -1,3 +1,8 @@
+firebase-tools
+App with reactJS
+Serverless functions on firebase for contact form
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

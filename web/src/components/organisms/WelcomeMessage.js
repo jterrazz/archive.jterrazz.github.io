@@ -11,7 +11,7 @@ const WelcomeMessage = props => {
       <h1 className="mb-4">
         I create <b>clean, robust, scalable and powerful</b> applications for the new world, same quality from backend to frontend.
       </h1>
-      <Button variant="dark" className="rounded-pill font-weight-500 px-3">My work</Button>
+      <Button variant="dark" className="rounded-pill font-weight-500 px-3">Check my work</Button>
       <Link to="/contact">
         <Button variant="transparent" className="font-weight-500 px-3 text-gradient-0">Contact me</Button>
       </Link>

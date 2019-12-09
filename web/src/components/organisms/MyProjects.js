@@ -1,17 +1,20 @@
 import React, {useState} from "react";
 import TagTogglable from "../atoms/TagTogglable";
 import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
 import ProjectCell from "../molecules/ProjectCell";
+import Masonry from 'react-masonry-css'
+import config from "../../config";
 
 const MyProjects = props => {
   const TAGS = ['Personal', 'Professional', 'Hackathons'];
-  const PROJECTS = [
-    { name: "Hypertube", link: "https://github.com/", date: new Date(), description: "A project about XXX", category: "Personal", tags: ["Frontend", "Backend", "React", "NextJS", "NodeJS", "Koa"] },
-  ]
-  const [tags, setTags] = useState(TAGS.map(tag => ({ name: tag, active: false })));
 
-  const filteredProjects = PROJECTS
+  const [tags, setTags] = useState(TAGS.map(tag => ({ name: tag, active: true })));
+
+  const activeTags = tags.map(tag => tag.active ? tag.name : null).filter(tag => tag !== null)
+  console.log(activeTags)
+  const filteredProjects = props.projects.filter(project => {
+    return activeTags.indexOf(project.category) > -1
+  })
 
   const onTagToggle = name => active => {
     setTags(tags.map(el => el.name === name ? ({ name, active }) : el))
@@ -30,13 +33,18 @@ const MyProjects = props => {
           all</Button>
       </nav>
 
-      <Row>
-        {filteredProjects.map(project => <ProjectCell project={project}/>)}
-      </Row>
+      <Masonry
+        breakpointCols={3}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column">
+        {filteredProjects.map(project => (
+          <li>
+            <ProjectCell project={project}/>
+          </li>
+        ))}
+      </Masonry>
 
-      + 36 projects on github
-
-      Find all my projects on github and devpost
+      <p className="font-italic">And many others available on <a href={config.githubProfileUrl}>Github</a> and <a href={config.devpostProfileUrl}>Devpost</a></p>
 
     </div>
   )

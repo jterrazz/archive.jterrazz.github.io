@@ -1,10 +1,25 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import config from "../../config";
+import {ParallaxBanner} from "react-scroll-parallax/cjs";
 
 const MyIntroduction = props => {
   return (
     <div>
+      <ParallaxBanner
+        className="w-100 mx-auto mb-5"
+        layers={[
+          {
+            image: '/images/anonymous.png',
+            amount: 0.2,
+          },
+        ]}
+        style={{
+          height: '280px',
+          marginTop: -120
+        }}
+      />
+
       <p className="mb-4">
         <h2 className="mb-5 font-weight-700">
           Hey there *waves*, my <br/> name is Jean-Baptiste, developer, <br/>XXX and XXX.

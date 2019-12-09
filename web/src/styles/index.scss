@@ -18,7 +18,7 @@ body {
 }
 
 button {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 code {
@@ -149,3 +149,76 @@ $bg-hover-opacity: 0.5;
 .animated {
   transition: 0.4s;
 }
+
+#contact-page {
+  .form-control {
+    border-color: $dark;
+    &::placeholder {
+      color: $muted;
+    }
+  }
+  .form-label {
+    font-weight: 600;
+  }
+}
+
+.social-outer {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary;
+}
+
+
+.my-masonry-grid {
+  display: flex;
+  margin-left: -24px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 24px; /* gutter size */
+  background-clip: padding-box;
+
+  > li {
+    margin-bottom: 24px;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.project-cell {
+  transition: 0.2s ease-out;
+  &:hover {
+    border-color: $primary !important;
+  }
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+  background: grey;
+  margin-bottom: 30px;
+}
+
+.tag {
+  @extend .small;
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background: $background;
+  color: $muted;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+button {
+  background: transparent;
+  border: 0;
+}
+
+button:focus {outline:0;}
