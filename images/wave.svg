@@ -4,8 +4,8 @@
     <title>wave</title>
     <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="line-copy" transform="translate(0.000000, -623.000000)" fill="#F3F5F7">
-            <path d="M0,623 C291,689 582,722 873,722 C1164,722 1455,689 1746,623 L1746,722 L0,722 L0,623 Z" id="wave"></path>
+        <g id="line-copy" transform="translate(0.000000, -623.000000)" fill="#FFFFFF">
+            <path d="M0,623 C291,689 582,722 873,722 C1164,722 1455,689 1746,623 L0,623 Z" id="wave"></path>
         </g>
     </g>
 </svg>
