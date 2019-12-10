@@ -11,11 +11,11 @@ const MyInformations = props => {
 
       <Row>
         <Col xs={5}>
-          Scalable, easy to read code
-          State of the art documentations
-          The best practice in Web development
-          A real care about design, both on the code and on the visual
-          Alumni of the innovative and best french programming school 42
+          <p>Scalable, easy to read code</p>
+          <p>State of the art documentations</p>
+          <p>The latest technos / best practice in Web /Software development</p>
+          <p>A real care about design, both on the code and on the visual</p>
+          <p>Alumni of the innovative and best french programming school 42</p>
         </Col>
 
         <Col xs={7}>
@@ -24,6 +24,8 @@ const MyInformations = props => {
           </Parallax>
         </Col>
       </Row>
+
+      Articles
     </div>
   )
 };

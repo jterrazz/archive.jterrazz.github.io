@@ -28,11 +28,43 @@ const Terminal = props => {
     }
   }, []);
 
+  const commands = [
+    {
+      command: "whoami",
+      result: "I am eeee"
+    },
+    {
+      command: "ps -A",
+      result: "I am eeee"
+    },
+    {
+      command: "ls -a skills.txt",
+      result: "I am eeee"
+    },
+    {
+      command: "curl -g \"http://my-formation.com\"",
+      result: "I am eeee"
+    },
+  ]
+
   const renderText = () => (
     <Typist cursor={cursorOptions}>
-      <span> First Sentence </span>
-      <Typist.Backspace count={8} delay={200} />
-      <span> Phrase </span>
+      {commands.map(cmd => {
+        return (
+          <span>
+            <span>
+              <span className="terminal-command--blue">~/jterrazz</span>
+              <span className="terminal-command--purple"> > </span>
+              {cmd.command}
+            </span>
+            <br/>
+            <span className="terminal-command--gray">
+              {cmd.result}
+            </span>
+            <br/>
+          </span>
+        )
+      })}
     </Typist>
   );
 

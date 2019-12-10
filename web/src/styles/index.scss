@@ -94,26 +94,38 @@ li {
 }
 
 .text-gradient-0 {
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(253, 193, 104, 1) 0%, rgba(251, 128, 128, 1) 90%);
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(254,158,94,1) 0%, rgba(254,94,114,1) 94.3% );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.rounded {
-  border-radius: 16px !important;
-}
+//.rounded {
+  //border-radius: 16px !important;
+//}
 
-.rounded-max {
-  border-radius: 200px;
-}
+//.rounded-max {
+//  border-radius: 200px;
+//}
 
 .bg-clear {
   background: $background;
 }
+.bg-clear-2 {
+  background: #e5dfdf;
+}
 
-.bg-home {
+.project-cell__category {
+  background: $muted;
+  border-radius: 20px;
+  padding: 1px 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+}
+
+.gb-wave {
   background-image: url("/images/bottom-wave.svg");
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: 102%;
 }
@@ -126,7 +138,7 @@ li {
 
 $bg-hover-opacity: 0.5;
 .bg-text-hover {
-  background-image: radial-gradient( circle farthest-corner at 30.3% 80.3%,  rgba(85,88,218,$bg-hover-opacity) 0%, rgba(95,209,249,$bg-hover-opacity) 100.2% );
+  background-image: radial-gradient( circle 902px at 20% 80%,  rgba(18,50,90,$bg-hover-opacity) 0%, rgba(207,199,252,$bg-hover-opacity) 100.2% );
 }
 
 .bg-dark-clear {
@@ -147,7 +159,7 @@ $bg-hover-opacity: 0.5;
 }
 
 .animated {
-  transition: 0.4s;
+  transition-duration: 0.2s;
 }
 
 #contact-page {
@@ -191,13 +203,6 @@ a {
   text-decoration: none !important;
 }
 
-.project-cell {
-  transition: 0.2s ease-out;
-  &:hover {
-    border-color: $primary !important;
-  }
-}
-
 /* Style your items */
 .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
   background: grey;
@@ -222,3 +227,52 @@ button {
 }
 
 button:focus {outline:0;}
+
+h2 {
+  font-weight: 600;
+}
+.opacity-0 {
+  opacity: 0; }
+
+.opacity-10 {
+  opacity: 0.1; }
+
+.opacity-20 {
+  opacity: 0.2; }
+
+.opacity-30 {
+  opacity: 0.3; }
+
+.opacity-40 {
+  opacity: 0.4; }
+
+.opacity-50 {
+  opacity: 0.5; }
+
+.opacity-60 {
+  opacity: 0.6; }
+
+.opacity-70 {
+  opacity: 0.7; }
+
+.opacity-80 {
+  opacity: 0.8; }
+
+.opacity-90 {
+  opacity: 0.9; }
+
+.opacity-100 {
+  opacity: 1; }
+
+.terminal-command--blue {
+  color: #99ecfd;
+}
+.terminal-command--purple {
+  color: #c9a8fa;
+}
+.terminal-command--red {
+  color: #ff6d67;
+}
+.terminal-command--gray {
+  color: #e5dfdf;
+}

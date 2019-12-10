@@ -7,36 +7,40 @@ import MyIntroduction from "../organisms/MyIntroduction";
 import WelcomeMessage from "../organisms/WelcomeMessage";
 import MyArticles from "../organisms/MyArticles";
 import {ParallaxBanner} from "react-scroll-parallax/cjs";
-import { Link } from "react-router-dom";
+import {HashRouter as Router, Link} from "react-router-dom";
 import ShapesParallaxBackground from "../molecules/ShapesParallaxBackground";
 import config from "../../config";
+import TheNavBar from "../organisms/TheNavBar";
+import SocialMediaIcons from "../molecules/SocialMediaIcons";
 
 const HomePage = props => {
-  const articlesRef = React.createRef();
   const projectsRef = React.createRef();
 
-  function handleScrollToElement(event) {
+  function handleScrollToProjects(event) {
     window.scroll({
-      top: articlesRef.current.offsetTop,
+      top: projectsRef.current.offsetTop,
       behavior: 'smooth'
     })
   }
 
   return (
     <div>
-        <div style={{height: '95vh'}} className="position-relative bg-home">
+      <div className={"position-fixed h-100 d-flex align-items-center ml-3 animated " + (props.showMediaIcons ? "opacity-100" : "opacity-0")}>
+        <SocialMediaIcons vertical transparent/>
+      </div>
+        <div style={{height: '100vh'}} className="position-relative">
           <div className="position-absolute w-100 h-100">
             <Container className="w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center">
-              <WelcomeMessage/>
+              <WelcomeMessage handleScrollToProjects={handleScrollToProjects}/>
             </Container>
           </div>
           {/*<div className="position-absolute w-100 d-flex justify-content-center" style={{bottom: 0, marginBottom: -20}}>*/}
           {/*  <img src="/images/waving-hand.svg" width={42}/>*/}
           {/*</div>*/}
-          <ShapesParallaxBackground/>
+          {/*<ShapesParallaxBackground/>*/}
         </div>
 
-      <div className="bg-clear p-5" onClick={handleScrollToElement}>
+      <div className="bg-clear p-5 ">
         <Container>
           <MyIntroduction/>
         </Container>
@@ -52,7 +56,7 @@ const HomePage = props => {
         </Container>
       </div>
 
-      <div className="bg-dark text-white p-5" ref={articlesRef}>
+      <div className="bg-dark text-white p-5">
         <Container>
           <MyArticles articles={config.articles}/>
         </Container>

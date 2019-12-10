@@ -26,7 +26,7 @@ const TheNavBar = props => {
   }
 
   return (
-    <Navbar bg="white" sticky="top" expand="lg">
+    <Navbar bg="white" fixed="top" expand="lg">
       <Link to="/">
         <Navbar.Brand className="navbar-brand text-dark">jterrazz</Navbar.Brand>
       </Link>

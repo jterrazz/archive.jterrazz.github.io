@@ -6,12 +6,11 @@ import Masonry from 'react-masonry-css'
 import config from "../../config";
 
 const MyProjects = props => {
-  const TAGS = ['Personal', 'Professional', 'Hackathons'];
+  const TAGS = ['Personal', 'Professional', 'Hackathon'];
 
   const [tags, setTags] = useState(TAGS.map(tag => ({ name: tag, active: true })));
 
   const activeTags = tags.map(tag => tag.active ? tag.name : null).filter(tag => tag !== null)
-  console.log(activeTags)
   const filteredProjects = props.projects.filter(project => {
     return activeTags.indexOf(project.category) > -1
   })
@@ -25,12 +24,14 @@ const MyProjects = props => {
       <h2 className="mb-4">My projects</h2>
 
       <nav className="mb-4">
-        <span className="font-weight-600 mr-2">Tags:</span>
+        <label className="font-weight-600 mr-2">Categories:</label>
         {tags.map(tag =>
           <TagTogglable className="mr-2" key={tag.name} onToggle={onTagToggle(tag.name)} selected={tag.active}>{tag.name}</TagTogglable>
         )}
         <Button variant="transparent" className="font-weight-600 text-muted">Select
           all</Button>
+
+        <label className="font-weight-600 mr-2">Tags:</label>
       </nav>
 
       <Masonry
