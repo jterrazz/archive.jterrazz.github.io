@@ -32,7 +32,7 @@ const ContactPage = props => {
       </Row>
 
       <Row>
-        <Col>
+        <Col xs={12} md={6}>
           <Formik
             // validationSchema={schema}
             onSubmit={onSubmit}
@@ -97,7 +97,7 @@ const ContactPage = props => {
           }
         </Col>
 
-        <Col>
+        <Col xs={12} md={6}>
           <p className="font-italic m-0">{t('contactReachMeTitle')} at </p>
           <p className="text-uppercase font-weight-bold mb-5"><a href={"mailto:" + config.email} className="text-dark">{config.email}</a></p>
         </Col>
