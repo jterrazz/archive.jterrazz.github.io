@@ -31,24 +31,29 @@ const Terminal = props => {
   const commands = [
     {
       command: "whoami",
-      result: "I am eeee"
-    },
-    {
-      command: "ps -A",
-      result: "I am eeee"
+      results: ["Terrazzoni Jean-Baptiste, 24yo from Corsica, France"]
     },
     {
       command: "ls -a skills.txt",
-      result: "I am eeee"
+      results: ["Backend / Frontend / Software / Design"]
     },
     {
-      command: "curl -g \"http://my-formation.com\"",
-      result: "I am eeee"
+      command: "wget \"https://jterrazz.com/?formation=true\"",
+      results: ["42 Paris School"]
+    },
+    {
+      command: "ps -A",
+      results: [
+        "      PID TTY           TIME      CMD",
+        "     042 ttys000    0:00.03 Travel",
+        "     043 ttys000    0:00.03 Poker",
+        " 18042 ttys000    0:00.03 New technologies",
+        " 18043 ttys000    0:00.03 Finance"]
     },
   ]
 
   const renderText = () => (
-    <Typist cursor={cursorOptions}>
+    <Typist cursor={cursorOptions} avgTypingDelay={30}>
       {commands.map(cmd => {
         return (
           <span>
@@ -58,10 +63,14 @@ const Terminal = props => {
               {cmd.command}
             </span>
             <br/>
-            <span className="terminal-command--gray">
-              {cmd.result}
-            </span>
-            <br/>
+            {
+              cmd.results.map(result => (
+                <span className="terminal-command terminal-command--gray">
+                  {result}
+                  <br/>
+                </span>
+              ))
+            }
           </span>
         )
       })}

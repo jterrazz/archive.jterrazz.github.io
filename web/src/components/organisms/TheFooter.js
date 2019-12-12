@@ -15,7 +15,7 @@ const TheFooter = props => {
           <div>@2019</div>
         </div>
 
-        <SocialMediaIcons/>
+        <SocialMediaIcons variant={props.variant}/>
 
         <div className="text-muted text-right small">
           <div>Made with <span role="img" aria-label="love">❤️</span> (and

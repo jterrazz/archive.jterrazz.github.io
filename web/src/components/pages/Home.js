@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import MyProjects from "../organisms/MyProjects";
@@ -6,39 +6,46 @@ import MyInformations from "../organisms/MyInformations";
 import MyIntroduction from "../organisms/MyIntroduction";
 import WelcomeMessage from "../organisms/WelcomeMessage";
 import MyArticles from "../organisms/MyArticles";
-import {ParallaxBanner} from "react-scroll-parallax/cjs";
-import {HashRouter as Router, Link} from "react-router-dom";
-import ShapesParallaxBackground from "../molecules/ShapesParallaxBackground";
+import {Link} from "react-router-dom";
 import config from "../../config";
-import TheNavBar from "../organisms/TheNavBar";
 import SocialMediaIcons from "../molecules/SocialMediaIcons";
+import {useTranslation} from "react-i18next";
 
 const HomePage = props => {
   const projectsRef = React.createRef();
+  const articlesRef = React.createRef();
+  const {t} = useTranslation();
 
+  // TODO Merge functions
   function handleScrollToProjects(event) {
     window.scroll({
       top: projectsRef.current.offsetTop,
       behavior: 'smooth'
     })
   }
+  function handleScrollToArticles(event) {
+    window.scroll({
+      top: articlesRef.current.offsetTop,
+      behavior: 'smooth'
+    })
+  }
 
   return (
     <div>
-      <div className={"position-fixed h-100 d-flex align-items-center ml-3 animated " + (props.showMediaIcons ? "opacity-100" : "opacity-0")}>
+      <div className={"position-fixed h-100 d-flex align-items-center ml-3 animated " + (props.showMediaIcons ? "opacity-100" : "opacity-0")} style={{zIndex: 99}}>
         <SocialMediaIcons vertical transparent/>
       </div>
-        <div style={{height: '100vh'}} className="position-relative">
-          <div className="position-absolute w-100 h-100">
-            <Container className="w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center">
-              <WelcomeMessage handleScrollToProjects={handleScrollToProjects}/>
-            </Container>
-          </div>
-          {/*<div className="position-absolute w-100 d-flex justify-content-center" style={{bottom: 0, marginBottom: -20}}>*/}
-          {/*  <img src="/images/waving-hand.svg" width={42}/>*/}
-          {/*</div>*/}
-          {/*<ShapesParallaxBackground/>*/}
+      <div style={{height: '100vh'}} className="position-relative">
+        <div className="position-absolute w-100 h-100">
+          <Container className="w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center">
+            <WelcomeMessage handleScrollToProjects={handleScrollToProjects}/>
+          </Container>
         </div>
+        {/*<div className="position-absolute w-100 d-flex justify-content-center" style={{bottom: 0, marginBottom: -20}}>*/}
+        {/*  <img src="/images/waving-hand.svg" width={42}/>*/}
+        {/*</div>*/}
+        {/*<ShapesParallaxBackground/>*/}
+      </div>
 
       <div className="bg-clear p-5 ">
         <Container>
@@ -47,16 +54,14 @@ const HomePage = props => {
       </div>
 
       <Container className="py-5">
-        <MyInformations/>
+        <MyInformations handleScrollToArticles={handleScrollToArticles}/>
       </Container>
 
-      <div>
-        <Container className="py-5" ref={projectsRef}>
-          <MyProjects projects={config.projects}/>
-        </Container>
-      </div>
+      <Container className="py-5" ref={projectsRef}>
+        <MyProjects projects={config.projects}/>
+      </Container>
 
-      <div className="bg-dark text-white p-5">
+      <div className="bg-dark text-white p-5" ref={articlesRef}>
         <Container>
           <MyArticles articles={config.articles}/>
         </Container>
@@ -66,12 +71,12 @@ const HomePage = props => {
         <Container>
           <div className="bg-primary p-5 d-flex align-items-center justify-content-between rounded">
             <h4 className="font-weight-500 m-0">
-              Let's get started!
+              {t('homeGetStartedTitle')}
             </h4>
 
             <div>
               <Link to="/contact">
-                <Button variant="dark">Contact form</Button>
+                <Button variant="dark">{t('homeGetStartedContactBtn')}</Button>
               </Link>
               <Button variant="dark" className="ml-3">Email</Button>
             </div>

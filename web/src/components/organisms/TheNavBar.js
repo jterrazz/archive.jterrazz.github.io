@@ -35,7 +35,7 @@ const TheNavBar = props => {
       <Navbar.Collapse>
         <Nav className="mx-auto d-flex align-items-center">
           <div className="green-dot mr-2"/>
-          <div className="small font-weight-500">Available for work</div>
+          <div className="small font-weight-500">{t('statusAvailable')}</div>
         </Nav>
         <div className="small font-weight-600">
           <button className={"mr-1 " + (language === "en" ? "text-dark" : "text-muted")} onClick={() => changeLanguage("en")}>EN</button>

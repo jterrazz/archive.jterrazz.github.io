@@ -93,6 +93,10 @@ li {
   color: #7c89a6 !important;
 }
 
+.gd-0 {
+  background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(254,158,94,1) 0%, rgba(254,94,114,1) 94.3% );
+}
+
 .text-gradient-0 {
   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(254,158,94,1) 0%, rgba(254,94,114,1) 94.3% );
   -webkit-background-clip: text;
@@ -115,11 +119,11 @@ li {
 }
 
 .project-cell__category {
-  background: $muted;
+  background: $dark;
   border-radius: 20px;
-  padding: 1px 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  padding: 2px 10px;
+  font-size: 0.84rem;
+  font-weight: 600;
   color: white;
 }
 
@@ -136,7 +140,7 @@ li {
   background-position: center;
 }
 
-$bg-hover-opacity: 0.5;
+$bg-hover-opacity: 0.6;
 .bg-text-hover {
   background-image: radial-gradient( circle 902px at 20% 80%,  rgba(18,50,90,$bg-hover-opacity) 0%, rgba(207,199,252,$bg-hover-opacity) 100.2% );
 }
@@ -181,7 +185,7 @@ $bg-hover-opacity: 0.5;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $primary;
+  background: white;
 }
 
 
@@ -207,6 +211,18 @@ a {
 .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
   background: grey;
   margin-bottom: 30px;
+}
+
+.mydropdown {
+  &:hover {
+    .mydropdown-label {
+      opacity: 1;
+    }
+  }
+
+  .mydropdown-label {
+    opacity: 0;
+  }
 }
 
 .tag {
@@ -275,4 +291,8 @@ h2 {
 }
 .terminal-command--gray {
   color: #e5dfdf;
+}
+
+.terminal-command {
+  white-space: pre;
 }

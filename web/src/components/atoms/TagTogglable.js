@@ -9,7 +9,7 @@ const TagTogglable = props => {
   };
 
   return (
-    <button onClick={onClick} className={props.className + " border d-inline-flex align-items-center tag-togglable animated" + (props.selected ? " active" : "")}>
+    <button onClick={onClick} className={props.className + " border d-inline-flex align-items-center tag-togglable animated" + (props.selected ? " active" : "") + (props.small ? " small": "")}>
       <span>{props.children}</span>
       <span className="plus animated"/>
     </button>

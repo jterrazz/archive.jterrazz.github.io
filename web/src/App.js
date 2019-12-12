@@ -4,6 +4,7 @@ import {
   HashRouter as Router,
   Switch,
   Route,
+  withRouter
 } from "react-router-dom";
 
 import TheNavBar from "./components/organisms/TheNavBar";
@@ -14,7 +15,7 @@ import ContactPage from "./components/pages/Contact";
 import SocialMediaIcons from "./components/molecules/SocialMediaIcons";
 import ScrollBarPreview from "./components/molecules/ScrollBarPreview";
 
-export default function App() {
+function App(props) {
   let last_known_scroll_position = 0;
   let ticking = false;
   const [showMediaIcons, setShowMediaIcons] = useState(true);
@@ -40,6 +41,8 @@ export default function App() {
     }
   });
 
+  const theme = props.location.pathname === "/" ? "primary" : "";
+
   return (
     <Router>
       <TheNavBar/>
@@ -57,8 +60,18 @@ export default function App() {
           </Route>
         </Switch>
       </ParallaxProvider>
-      <TheFooter/>
+      <TheFooter variant={theme}/>
       <WelcomeModal/>
+    </Router>
+  );
+}
+
+const RoutedApp = withRouter(App);
+
+export default function() {
+  return (
+    <Router>
+      <RoutedApp/>
     </Router>
   );
 }

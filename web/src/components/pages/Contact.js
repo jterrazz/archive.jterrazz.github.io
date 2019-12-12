@@ -92,7 +92,9 @@ const ContactPage = props => {
               </Form>
             )}
           </Formik>
+          { messageSent &&
           <p className="text-success text-center font-weight-500 p-2">Message sent !</p>
+          }
         </Col>
 
         <Col>

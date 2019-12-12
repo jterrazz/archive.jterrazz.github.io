@@ -1,7 +1,21 @@
+# jterrazz.github.io
+****
 firebase-tools
 App with reactJS
 Serverless functions on firebase for contact form
 
+### File structure
+```bash
+/functions # Serverless functions
+/web # React Web App
+```
+
+## Possible improvements
+- Mobile support (home + contact)
+- Filter by tag
+- Refactor / clean the code
+- Add sections in the ScrollBarPrewiew
+- Add sections to my introduction
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
