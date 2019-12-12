@@ -12,8 +12,6 @@ import HomePage from "./components/pages/Home";
 import TheFooter from "./components/organisms/TheFooter";
 import WelcomeModal from "./components/organisms/WelcomeModal";
 import ContactPage from "./components/pages/Contact";
-import SocialMediaIcons from "./components/molecules/SocialMediaIcons";
-import ScrollBarPreview from "./components/molecules/ScrollBarPreview";
 
 function App(props) {
   let last_known_scroll_position = 0;
@@ -46,10 +44,6 @@ function App(props) {
   return (
     <Router>
       <TheNavBar/>
-
-      <div className="position-fixed h-100 d-flex align-items-center mr-3 d-" style={{right: 0}}>
-        <ScrollBarPreview/>
-      </div>
       <ParallaxProvider>
         <Switch>
           <Route path="/contact">

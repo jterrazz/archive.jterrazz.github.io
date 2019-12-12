@@ -10,6 +10,12 @@ const MyProjects = props => {
   const {t} = useTranslation();
   const TAGS = ['personal', 'professional', 'hackathon'];
 
+  const breakpointColumnsObj = {
+    default: 3,
+    990: 2,
+    765: 1
+  };
+
   const [tags, setTags] = useState(TAGS.map(tag => ({ name: tag, active: true })));
 
   const activeTags = tags.map(tag => tag.active ? tag.name : null).filter(tag => tag !== null)
@@ -44,7 +50,7 @@ const MyProjects = props => {
       </nav>
 
       <Masonry
-        breakpointCols={3}
+        breakpointCols={breakpointColumnsObj}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column">
         {filteredProjects.map(project => (

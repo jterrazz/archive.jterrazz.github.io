@@ -32,7 +32,7 @@ const MyIntroduction = props => {
       </div>
 
       <Row>
-        <Col xs={8}>
+        <Col xs={12} md={8}>
           <h2 className="mb-5">
             {t('myIntroductionTitle')}
           </h2>

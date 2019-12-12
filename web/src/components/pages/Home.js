@@ -10,6 +10,7 @@ import {Link} from "react-router-dom";
 import config from "../../config";
 import SocialMediaIcons from "../molecules/SocialMediaIcons";
 import {useTranslation} from "react-i18next";
+import ScrollBarPreview from "../molecules/ScrollBarPreview";
 
 const HomePage = props => {
   const projectsRef = React.createRef();
@@ -32,7 +33,10 @@ const HomePage = props => {
 
   return (
     <div>
-      <div className={"position-fixed h-100 d-flex align-items-center ml-3 animated " + (props.showMediaIcons ? "opacity-100" : "opacity-0")} style={{zIndex: 99}}>
+      <div className="position-fixed h-100 d-md-flex align-items-center mr-3 d-none" style={{right: 0}}>
+        <ScrollBarPreview/>
+      </div>
+      <div className={"position-fixed h-100 align-items-center ml-3 animated d-none" + (props.showMediaIcons ? " opacity-100" : " opacity-0")} style={{zIndex: 99}}>
         <SocialMediaIcons vertical transparent/>
       </div>
       <div style={{height: '100vh'}} className="position-relative">
@@ -47,7 +51,7 @@ const HomePage = props => {
         {/*<ShapesParallaxBackground/>*/}
       </div>
 
-      <div className="bg-clear p-5 ">
+      <div className="bg-clear py-5 ">
         <Container>
           <MyIntroduction/>
         </Container>
@@ -61,7 +65,7 @@ const HomePage = props => {
         <MyProjects projects={config.projects}/>
       </Container>
 
-      <div className="bg-dark text-white p-5" ref={articlesRef}>
+      <div className="bg-dark text-white py-5" ref={articlesRef}>
         <Container>
           <MyArticles articles={config.articles}/>
         </Container>

@@ -31,23 +31,20 @@ const TheNavBar = props => {
         <Navbar.Brand className="navbar-brand text-dark">jterrazz</Navbar.Brand>
       </Link>
 
-      <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-      <Navbar.Collapse>
-        <Nav className="mx-auto d-flex align-items-center">
-          <div className="green-dot mr-2"/>
-          <div className="small font-weight-500">{t('statusAvailable')}</div>
-        </Nav>
-        <div className="small font-weight-600">
-          <button className={"mr-1 " + (language === "en" ? "text-dark" : "text-muted")} onClick={() => changeLanguage("en")}>EN</button>
-          <button className={language === "fr" ? "text-dark" : "text-muted"} onClick={() => changeLanguage("fr")}>FR</button>
-        </div>
-        {/*<Nav.Link href="#contact">Contact</Nav.Link>*/}
-        {/*<button className="hamburger hamburger--collapse p-0 ml-3" type="button">*/}
-        {/*  <span className="hamburger-box">*/}
-        {/*    <span className="hamburger-inner"/>*/}
-        {/*  </span>*/}
-        {/*</button>*/}
-      </Navbar.Collapse>
+      <Nav className="mx-auto d-flex align-items-center">
+        <div className="green-dot mr-2"/>
+        <div className="small font-weight-500">{t('statusAvailable')}</div>
+      </Nav>
+      <div className="small font-weight-600">
+        <button className={"mr-1 " + (language === "en" ? "text-dark" : "text-muted")} onClick={() => changeLanguage("en")}>EN</button>
+        <button className={language === "fr" ? "text-dark" : "text-muted"} onClick={() => changeLanguage("fr")}>FR</button>
+      </div>
+      {/*<Nav.Link href="#contact">Contact</Nav.Link>*/}
+      {/*<button className="hamburger hamburger--collapse p-0 ml-3" type="button">*/}
+      {/*  <span className="hamburger-box">*/}
+      {/*    <span className="hamburger-inner"/>*/}
+      {/*  </span>*/}
+      {/*</button>*/}
     </Navbar>
   )
 }

@@ -15,7 +15,7 @@ const MyInformations = props => {
       <h2 className="mb-4">{t('myInformationsTitle')}</h2>
 
       <Row>
-        <Col xs={5}>
+        <Col xs={12} md={5}>
           <p className="mb-4">
             {t('myInformationsText')}
           </p>
@@ -23,7 +23,7 @@ const MyInformations = props => {
           <Button variant="dark" className="rounded-pill mt-4" onClick={props.handleScrollToArticles}>{t('myInformationsArticleBtn')}</Button>
         </Col>
 
-        <Col xs={7}>
+        <Col xs={12} md={7}>
           <Parallax x={[20, 0]}>
             <Terminal/>
           </Parallax>
