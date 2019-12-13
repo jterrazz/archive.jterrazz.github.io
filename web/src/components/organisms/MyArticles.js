@@ -10,8 +10,8 @@ const MyArticles = props => {
   return (
     <div>
       <h2>{t('myArticlesTitle')}</h2>
-      <p className="text-muted mb-5">{t('myArticlesSubtitle')}</p>
-      <Row className="mb-5">
+      <p className="text-muted mb-md-5 mb-3">{t('myArticlesSubtitle')}</p>
+      <Row className="mb-md-5 mb-3">
         {props.articles.map(article => (
           <Col xs={12} md={4} className="mb-3 mb-md-0">
             <ArticleCell {...article}/>

@@ -12,21 +12,23 @@ const MyInformations = props => {
 
   return (
     <div>
-      <h2 className="mb-4">{t('myInformationsTitle')}</h2>
+      <h2 className="mb-3 mb-md-4">{t('myInformationsTitle')}</h2>
 
       <Row>
-        <Col xs={12} md={5}>
-          <p className="mb-4">
+        <Col xs={12} md={5} className="mb-3 mb-md-4">
+          <p className="mb-3 mb-md-4">
             {t('myInformationsText')}
           </p>
 
-          <Button variant="dark" className="rounded-pill mt-4" onClick={props.handleScrollToArticles}>{t('myInformationsArticleBtn')}</Button>
+          <Button variant="dark" className="rounded-pill" onClick={props.handleScrollToArticles}>{t('myInformationsArticleBtn')}</Button>
         </Col>
 
         <Col xs={12} md={7}>
-          <Parallax x={[20, 0]}>
-            <Terminal/>
-          </Parallax>
+          <div className="d-none d-md-block">
+            <Parallax x={[20, 0]}>
+              <Terminal/>
+            </Parallax>
+          </div>
         </Col>
       </Row>
     </div>

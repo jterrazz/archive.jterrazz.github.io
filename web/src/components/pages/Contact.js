@@ -21,13 +21,13 @@ const ContactPage = props => {
   }
 
   return (
-    <Container className="flex-fill pb-5" id="contact-page">
+    <Container className="flex-fill pb-md-5" id="contact-page">
       <Row className="py-5">
-        <Col className="d-flex align-items-center">
-          <h1 className="font-weight-700">{t('contactTitle')}</h1>
+        <Col xs={12} md={6} className="d-flex align-items-center">
+          <h1 className="font-weight-700 my-4">{t('contactTitle')}</h1>
         </Col>
-        <Col>
-          <img src="/images/working-man.png" alt="working man" width={500}/>
+        <Col xs={12} md={6}>
+          <img src="/images/working-man.png" alt="working man" style={{width: "100%"}}/>
         </Col>
       </Row>
 
@@ -97,7 +97,7 @@ const ContactPage = props => {
           }
         </Col>
 
-        <Col xs={12} md={6}>
+        <Col xs={12} md={6} className="my-3">
           <p className="font-italic m-0">{t('contactReachMeTitle')} at </p>
           <p className="text-uppercase font-weight-bold mb-5"><a href={"mailto:" + config.email} className="text-dark">{config.email}</a></p>
         </Col>

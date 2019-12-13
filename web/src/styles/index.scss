@@ -27,9 +27,16 @@ code {
 }
 
 h1 {
+  @media (min-width: 800px) {
+    b {
+      background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(254,158,94,1) 0%, rgba(254,94,114,1) 94.3% );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: inherit;
+    }
+  }
   b {
-    @extend .text-gradient-0;
-    font-weight: inherit;
+    color: $primary;
   }
 }
 

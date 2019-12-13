@@ -30,7 +30,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
+    "predeploy": "yarn build && echo 'jterrazz.com' > ./build/CNAME",
     "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {

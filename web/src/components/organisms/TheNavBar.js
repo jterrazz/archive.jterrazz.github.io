@@ -36,7 +36,7 @@ const TheNavBar = props => {
         <div className="small font-weight-500">{t('statusAvailable')}</div>
       </Nav>
       <div className="small font-weight-600">
-        <button className={"mr-1 " + (language === "en" ? "text-dark" : "text-muted")} onClick={() => changeLanguage("en")}>EN</button>
+        <button className={"mr-md-1 px-1 px-md-2 " + (language === "en" ? "text-dark" : "text-muted")} onClick={() => changeLanguage("en")}>EN</button>
         <button className={language === "fr" ? "text-dark" : "text-muted"} onClick={() => changeLanguage("fr")}>FR</button>
       </div>
       {/*<Nav.Link href="#contact">Contact</Nav.Link>*/}

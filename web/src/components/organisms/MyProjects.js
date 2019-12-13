@@ -34,12 +34,11 @@ const MyProjects = props => {
       <h2 className="mb-4">{t('myProjectsTitle')}</h2>
 
       <nav className="mb-4">
-        <label className="font-weight-600 mr-2">Categories:</label>
+        <label className="font-weight-600 mr-2 d-none d-md-inline-block">{t('myProjectsCategoriesLabel')}</label>
         {tags.map(tag =>
-          <TagTogglable className="mr-2" key={tag.name} onToggle={onTagToggle(tag.name)} selected={tag.active}>{t(`tags.${tag.name}`)}</TagTogglable>
+          <TagTogglable className="mr-2 mb-2 mb-md-0 px-3 py-2 px-md-4 py-md-3" key={tag.name} onToggle={onTagToggle(tag.name)} selected={tag.active}>{t(`tags.${tag.name}`)}</TagTogglable>
         )}
-        <Button variant="transparent" className="font-weight-600 text-muted">Select
-          all</Button>
+        {/*<Button variant="transparent" className="font-weight-600 text-muted">Select all</Button>*/}
 
         {/*<label className="font-weight-600 mr-2">Tags:</label>*/}
         {/*{TAGSSS.map(tag =>*/}
@@ -54,13 +53,13 @@ const MyProjects = props => {
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column">
         {filteredProjects.map(project => (
-          <li key={project.name}>
+          <li key={project.name} className="mb-3 mb-md-4">
             <ProjectCell project={project}/>
           </li>
         ))}
       </Masonry>
 
-      <p className="font-italic">And many others available on <a href={config.githubProfileUrl}>Github</a> and <a href={config.devpostProfileUrl}>Devpost</a></p>
+      <p className="font-italic m-0">And many others available on <a href={config.githubProfileUrl}>Github</a> and <a href={config.devpostProfileUrl}>Devpost</a></p>
 
     </div>
   )

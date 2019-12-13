@@ -22,6 +22,7 @@ const enTranslation = {
 
   // MyProjects
   myProjectsTitle: "My projects",
+  myProjectsCategoriesLabel: "Categories:",
 
   // MyArticles
   myArticlesTitle: "My medium stories",
@@ -47,6 +48,9 @@ const enTranslation = {
     professional: "Profesional",
     hackathon: "Hackathon",
   },
+
+  footerMadeWith: "Made with",
+  footerHostedOn: "Hosted on",
 
   projects: {
     "jterrazz-com": "My portfolio website, hosted on Github Pages",

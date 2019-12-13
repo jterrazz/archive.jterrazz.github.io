@@ -78,7 +78,7 @@ const Terminal = props => {
   );
 
   return (
-    <div id="terminal" className="terminal text-white small font-weight-600 p-3">
+    <div id="terminal" className="terminal text-white small font-weight-600 p-3 overflow-hidden">
       <img src="/images/terminal-dots.png" alt="commands" width={53} className="mb-2"/>
       {showText ? renderText() : null}
     </div>

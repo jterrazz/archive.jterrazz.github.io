@@ -12,7 +12,7 @@ const MyIntroduction = props => {
     <div>
       <div className="position-relative">
         <ParallaxBanner
-          className="w-100 mx-auto mb-5"
+          className="w-100 mx-auto mb-3 mb-md-5"
           layers={[
             {
               image: '/images/anonymous.png',
@@ -33,14 +33,14 @@ const MyIntroduction = props => {
 
       <Row>
         <Col xs={12} md={8}>
-          <h2 className="mb-5">
+          <h2 className="mb-3 mb-md-5">
             {t('myIntroductionTitle')}
           </h2>
-          <p className="font-weight-500 mb-5" dangerouslySetInnerHTML={{__html: t('myIntroductionText')}}/>
+          <p className="font-weight-500 mb-3 mb-md-5" dangerouslySetInnerHTML={{__html: t('myIntroductionText')}}/>
         </Col>
       </Row>
 
-      <p className="text-uppercase font-weight-bold mb-5"><a href={"mailto:" + config.email} className="text-dark">{config.email}</a></p>
+      <p className="text-uppercase font-weight-bold mb-3 mb-md-5"><a href={"mailto:" + config.email} className="text-dark">{config.email}</a></p>
     </div>
   )
 }

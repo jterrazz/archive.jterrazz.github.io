@@ -8,13 +8,8 @@ $plus-color: $muted;
 .tag-togglable {
   border: 0;
   border-radius: 100px;
-  padding: 12px 20px;
   background: white;
   color: $muted;
-
-  &.small {
-    padding: 3px 8px;
-  }
 
   &:focus {
     outline: none;
