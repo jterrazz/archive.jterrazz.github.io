@@ -4,23 +4,23 @@ const frTranslation = {
 
   // WelcomeMessage
   welcomeMessageSubtitle: "Bonjour",
-  welcomeMessageTitle: "Je <b>conçois et construis</b> le code des applications de demain.",
+  welcomeMessageTitle: "Je <b>conçois et construis</b> le code des <br/>applications de demain",
   welcomeMessageWorkBtn: "Mes projets",
   welcomeMessageContactBtn: "Contactez moi",
 
   // MyIntroduction
   myIntroductionTitle: "Bonjour, je suis Jean-Baptiste, un developeur passionné à Paris.",
-  myIntroductionText: "J'aime mettre en relation les entreprises les plus innovantes avec leurs clients, avec du code efficace, et bien construit et de belles interfaces." +
-    "Je vous aiderai à construire et créer les applications qui changeront le monde de demain.",
+  myIntroductionText: "J'aime mettre en relation les entreprises les plus innovantes avec leurs clients. Grâce à du code clair, efficace, intelligemment construit et de belles interfaces, " +
+    "je vous aiderai à créer les applications du monde de demain.",
 
   // myInformations
   myInformationsTitle: "Mon parcours",
-  myInformationsText: "Ma <b>passion des nouvelles technologies</b> depuis mon plus jeune age m'a amené à intégrer l'école de programmation la plus innovante qu'il existe, l'école parisienne <b>42</b>." +
+  myInformationsText: "Ma <b>passion pour les nouvelles technologies</b> depuis mon plus jeune âge m'a amené à intégrer un des écoles de programmation les plus innovante, <b>42 Paris</b>." +
     " D'une <b>formation informatique et financière</b>, j'ai su acquérir un ensemble de compétences variées qui vous aideront à construire de superbes applications." +
-    "<br/><br/>Je suis désormais un <b>developeur polyvalent</b>, capable de proposer des solutions en dehors du cadre habituel de developeur." +
-    "En plus de maitriser les <b>techniques les plus recentes du developement Web et Logiciel</b>, je m'épanouis dans des environements au changement rapide, et je suis capable de <b>collaborer efficacement</b> en equipe" +
-    "Je suis toujours curieux pour de nouvelles aventures, donc n'hésitez pas a me contacter avec vos superbes ideées!",
-  myInformationsArticleBtn: "Mes articles",
+    "<br/><br/>Je suis désormais un <b>developeur polyvalent</b>, capable de proposer des solutions en dehors du cadre habituel de developeur. " +
+    "En plus de maîtriser les <b>techniques les plus récentes du developement web et logiciel</b>, je suis capable de <b>collaborer efficacement</b> en équipe et je sais m'épanouir dans les environements en constante évolution" +
+    "<br/><br/>Avide de nouvelles aventures, n'hésitez pas à me contacter avec vos superbes ideées!",
+  myInformationsArticleBtn: "Accéder à mes articles",
 
   // MyProjects
   myProjectsTitle: "Mes projets",
@@ -58,7 +58,7 @@ const frTranslation = {
     "jterrazz-com": "Mon portfolio, hébergé sur Github Pages",
     "jterrazz-com/loved": "Beau design",
     "42-woody-woodpacker": "Packer pour binaires ELF.",
-    "42-hypertube": "Une application web NodeJS/ReactJS pour découvrir et rechercher des vidéos P2P.",
+    "42-hypertube": "Une application web NodeJS/ReactJS pour découvrir et visionner des vidéos P2P.",
     "42-hypertube/loved": "Backend async et bien documenté",
     "42-matcha": "Un site de rencontre en VueJS / Express.",
     "myshop-eth": "Une marketplace sociale, décentralisée et ouverte pour permettre de vrais P2P echanges.",
