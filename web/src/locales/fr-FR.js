@@ -4,7 +4,7 @@ const frTranslation = {
 
   // WelcomeMessage
   welcomeMessageSubtitle: "Bonjour",
-  welcomeMessageTitle: "Je <b>conçois et construis</b> le code des <br/>applications de demain",
+  welcomeMessageTitle: "Je <b>crée et construis le code</b> des <br/>applications de demain",
   welcomeMessageWorkBtn: "Mes projets",
   welcomeMessageContactBtn: "Contactez moi",
 

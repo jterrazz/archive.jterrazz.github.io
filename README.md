@@ -11,11 +11,13 @@ Serverless functions on firebase for contact form
 ```
 
 ## Possible improvements
-- Mobile support (home + contact)
+Complete description 
+- Add other skills (design etc)
 - Filter by tag
 - Refactor / clean the code
 - Add sections in the ScrollBarPrewiew
 - Add sections to my introduction
+- Change NavBar bg color by sections theme
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

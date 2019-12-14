@@ -4,7 +4,7 @@ const enTranslation = {
 
   // WelcomeMessage
   welcomeMessageSubtitle: "Hello",
-  welcomeMessageTitle: "I <b>design and build</b> the core of<br/>tomorrow's best applications",
+  welcomeMessageTitle: "I <b>design and build</b><br/>tomorrow's best applications",
   welcomeMessageWorkBtn: "My work",
   welcomeMessageContactBtn: "Contact me",
 
