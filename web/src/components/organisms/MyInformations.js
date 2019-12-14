@@ -5,7 +5,6 @@ import {Parallax} from "react-scroll-parallax";
 import Terminal from "../molecules/Terminal";
 import { useTranslation } from "react-i18next";
 import Button from "react-bootstrap/Button";
-import ProgressBar from "react-bootstrap/ProgressBar";
 
 const MyInformations = props => {
   const { t } = useTranslation();
@@ -16,9 +15,7 @@ const MyInformations = props => {
 
       <Row>
         <Col xs={12} md={5} className="mb-3 mb-md-4">
-          <p className="mb-3 mb-md-4">
-            {t('myInformationsText')}
-          </p>
+          <p className="mb-3 mb-md-4"  dangerouslySetInnerHTML={{__html: t('myInformationsText')}}/>
 
           <Button variant="dark" className="rounded-pill" onClick={props.handleScrollToArticles}>{t('myInformationsArticleBtn')}</Button>
         </Col>

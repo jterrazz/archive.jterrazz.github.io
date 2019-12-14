@@ -9,6 +9,10 @@ import {Formik} from 'formik';
 import firebaseApi from "../../services/firebase";
 import config from "../../config";
 
+/*
+ Not validating yet
+ */
+
 // https://react-bootstrap.github.io/components/forms/#forms-validation-libraries
 const ContactPage = props => {
   const [messageSent, setMessageSent] = useState(false);
@@ -98,7 +102,7 @@ const ContactPage = props => {
         </Col>
 
         <Col xs={12} md={6} className="my-3">
-          <p className="font-italic m-0">{t('contactReachMeTitle')} at </p>
+          <p className="font-italic m-0">{t('contactReachMeTitle')} </p>
           <p className="text-uppercase font-weight-bold mb-5"><a href={"mailto:" + config.email} className="text-dark">{config.email}</a></p>
         </Col>
       </Row>

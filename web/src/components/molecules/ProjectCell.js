@@ -6,6 +6,7 @@ import {faMedal, faHeart, faFlag} from "@fortawesome/free-solid-svg-icons";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import DropdownLabel from "./DropdownLabel";
 import {useTranslation} from "react-i18next";
+import {faLinkedin} from "@fortawesome/free-brands-svg-icons/faLinkedin";
 
 const ProjectCell = props => {
   const {t} = useTranslation()
@@ -37,7 +38,7 @@ const ProjectCell = props => {
           </div>
         </div>
 
-        <p>{t(`projects.${props.project.name.replace(".", "-")}`)}</p>
+        <p style={{fontSize: "0.95rem"}}>{t(`projects.${props.project.name.replace(".", "-")}`)}</p>
 
         {props.project.tags.map(tag => (
           <li className="tag">{tag}</li>
@@ -74,6 +75,11 @@ const ProjectCell = props => {
             {props.project.devpostLink &&
             <a href={props.project.devpostLink} className="ml-2" target="_blank">
               <FontAwesomeIcon size="lg" icon={faDev} className="text-dark"/>
+            </a>
+            }
+            {props.project.linkedinLink &&
+            <a href={props.project.linkedinLink} className="ml-2" target="_blank">
+              <FontAwesomeIcon size="lg" icon={faLinkedin} className="text-dark"/>
             </a>
             }
           </div>

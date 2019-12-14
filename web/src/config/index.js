@@ -43,11 +43,11 @@ const config = {
       githubLink: "https://github.com/jterrazz/42-woody-woodpacker",
       date: new Date("2019/10/03"),
       loved: true,
-      priority: 7,
+      priority: 5,
       description: true,
       category: "personal",
       tags: ["42", "C", "virus", "security", "ASM"],
-      progress: 0.95
+      progress: 0.9
     },
     {
       name: "42-hypertube",
@@ -74,7 +74,7 @@ const config = {
       name: "myshop.eth",
       githubLink: "https://github.com/jterrazz/myshop.eth",
       date: new Date("2019/12/03"),
-      priority: 5,
+      priority: 8,
       description: true,
       category: "personal",
       tags: ["ethereum", "blockchain", "ipfs"],
@@ -298,6 +298,7 @@ const config = {
     {
       name: "dalia-b2c",
       date: new Date("2018/11/03"),
+      linkedinLink: "https://www.linkedin.com/in/jterrazz/",
       priority: 5,
       description: true,
       category: "professional",
@@ -307,6 +308,7 @@ const config = {
     {
       name: "dalia-b2b",
       date: new Date("2018/08/03"),
+      linkedinLink: "https://www.linkedin.com/in/jterrazz/",
       priority: 3,
       description: true,
       category: "professional",

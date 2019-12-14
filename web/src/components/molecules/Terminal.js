@@ -38,8 +38,8 @@ const Terminal = props => {
       results: ["Backend / Frontend / Software / Design"]
     },
     {
-      command: "wget \"https://jterrazz.com/?formation=true\"",
-      results: ["42 Paris School"]
+      command: "curl \"https://jterrazz.com/formation\"",
+      results: ["42 Paris School", "Accounting and finance bachelor's degree", "French high school diploma in sciences"]
     },
     {
       command: "ps -A",
@@ -48,7 +48,7 @@ const Terminal = props => {
         "     042 ttys000    0:00.03 Travel",
         "     043 ttys000    0:00.03 Poker",
         " 18042 ttys000    0:00.03 New technologies",
-        " 18043 ttys000    0:00.03 Finance"]
+        " 18043 ttys000    0:00.03 Cryptocurrencies"]
     },
   ]
 
