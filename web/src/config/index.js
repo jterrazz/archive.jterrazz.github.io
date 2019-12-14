@@ -42,7 +42,6 @@ const config = {
       name: "42-woody-woodpacker",
       githubLink: "https://github.com/jterrazz/42-woody-woodpacker",
       date: new Date("2019/10/03"),
-      loved: true,
       priority: 5,
       description: true,
       category: "personal",

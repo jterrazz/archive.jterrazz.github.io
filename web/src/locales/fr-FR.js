@@ -4,20 +4,22 @@ const frTranslation = {
 
   // WelcomeMessage
   welcomeMessageSubtitle: "Bonjour",
-  welcomeMessageTitle: "Je crée le <b>code</b> des applications de demain.",
+  welcomeMessageTitle: "Je <b>conçois et construis</b> le code des applications de demain.",
   welcomeMessageWorkBtn: "Mes projets",
   welcomeMessageContactBtn: "Contactez moi",
 
   // MyIntroduction
   myIntroductionTitle: "Bonjour, je suis Jean-Baptiste, un developeur passionné à Paris.",
-  myIntroductionText: "I love connecting startups and companies with their customers with efficient code and well designed interfaces. " +
-    "I can help you create efficiently the new applications of this world.<br/>Mais assez parlé de moi, comment puis-je vous aider ?",
+  myIntroductionText: "J'aime mettre en relation les entreprises les plus innovantes avec leurs clients, avec du code efficace, et bien construit et de belles interfaces." +
+    "Je vous aiderai à construire et créer les applications qui changeront le monde de demain.",
 
   // myInformations
-  myInformationsTitle: "À propos de moi",
-  myInformationsText: "My passion of technology led me into joining the best french programming school in Paris: 42. " +
-    "Beside learning about the latest and the best of Software and Web development, I learned to be perfect a project in undefined environments, team thinking and collaboration." +
-    "My studies of finance and my passion for blockchains specialize me ... I'm always curious to discover / for new adventures",
+  myInformationsTitle: "Mon parcours",
+  myInformationsText: "Ma <b>passion des nouvelles technologies</b> depuis mon plus jeune age m'a amené à intégrer l'école de programmation la plus innovante qu'il existe, l'école parisienne <b>42</b>." +
+    " D'une <b>formation informatique et financière</b>, j'ai su acquérir un ensemble de compétences variées qui vous aideront à construire de superbes applications." +
+    "<br/><br/>Je suis désormais un <b>developeur polyvalent</b>, capable de proposer des solutions en dehors du cadre habituel de developeur." +
+    "En plus de maitriser les <b>techniques les plus recentes du developement Web et Logiciel</b>, je m'épanouis dans des environements au changement rapide, et je suis capable de <b>collaborer efficacement</b> en equipe" +
+    "Je suis toujours curieux pour de nouvelles aventures, donc n'hésitez pas a me contacter avec vos superbes ideées!",
   myInformationsArticleBtn: "Mes articles",
 
   // MyProjects
